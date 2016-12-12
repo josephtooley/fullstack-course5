@@ -8,7 +8,7 @@
   function LunchCheckController($scope, $filter) {
     $scope.sayMessage = function () {
       var input = $scope.menuTextBox;
-      if(input == null) {
+      if(input == null || input == "") {
         $scope.message = "Please enter data first"
       } else {
         var arrayLength = input.split(',').length;
