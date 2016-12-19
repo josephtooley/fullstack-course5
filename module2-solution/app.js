@@ -24,7 +24,7 @@
 
   function ShoppingListCheckOffService() {
     var service = this;
-    var itemsAvailable = [ { name: "pizza", quantity: "3" }, { name: "chicken", quantity: "5" }, { name: "apples", quantity: "12" } ];
+    var itemsAvailable = [ { name: "pizza(s)", quantity: "3" }, { name: "sausage(s)", quantity: "5" }, { name: "apple(s)", quantity: "12" } ];
     var itemsBought = [];
 
     service.addItem = function (itemName, quantity) {
