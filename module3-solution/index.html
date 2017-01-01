@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="NarrowItDownApp">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+<body>
+   <div class="container">
+    <h1>Narrow Down Your Chinese Menu Choice</h1>
+
+    <div ng-controller="NarrowItDownController as narrowDown">
+      <div class="form-group">
+        <input type="text" ng-model="SearchTermInput" placeholder="search term" class="form-control">
+      </div>
+      <div class="form-group narrow-button">
+        <button ng-click="narrowDown.found(SearchTermInput)" class="btn btn-primary">Narrow It Down For Me!</button>
+      </div>
+      <!-- found-items should be implemented as a component -->
+      <ul>
+        <li ng-repeat="item in narrowDown.found">
+          {{ item.name }}
+        </li>
+      </ul>
+      <!-- <found-items found-items="narrowDown.found"></found-items> -->
+    </div>
+  </div>
+
+</body>
+</html>
