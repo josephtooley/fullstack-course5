@@ -16,16 +16,11 @@
         <input ng-model="searchTermInput" type="text" placeholder="search term" class="form-control">
       </div>
       <div class="form-group narrow-button">
-        <button class="btn btn-primary">Narrow It Down For Me!</button>
+        <button ng-click="narrowDown.getMatchedMenuItems(searchTermInput)" class="btn btn-primary">Narrow It Down For Me!</button>
       </div>
+      </br></br></br>
       <!-- found-items should be implemented as a component -->
-      <found-items found-items="...." on-remove="...."></found-items>
-      <h2>Results:</h2>
-      <ul>
-        <li ng-repeat="item in narrowDown.found">
-          {{ item.name }}, {{item.short_name}}, {{ item.description }}
-        </li>
-      </ul>
+      <found-items></found-items>
     </div>
   </div>
 
