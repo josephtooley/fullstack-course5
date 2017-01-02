@@ -1,6 +1,7 @@
 <ul>
-  <li ng-repeat="item in narrowDown.found">
+  <li ng-show="narrowDown.found.length > 0" ng-repeat="item in narrowDown.found">
     {{ item.name }}, {{ item.short_name }}, {{ item.description }}
     <button ng-click="narrowDown.removeItem($index);">Don't want this one!</button>
   </li>
+  <li ng-show="narrowDown.found.length === 0">No results!</li>
 </ul>
