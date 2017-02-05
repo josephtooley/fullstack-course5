@@ -26,8 +26,21 @@
       }
     };
 
+    var itemsState = {
+      name: 'items',
+      url: '/categories/{shortName}',
+      component: 'items',
+      resolve: {
+        items: [ 'MenuDataService', '$transition$', function (MenuDataService, $transition$) {
+          console.log(MenuDataService.getItemsForCategory($transition$.params().shortName));
+          return MenuDataService.getItemsForCategory($transition$.params().shortName);
+        }]
+      }
+    };
+
     $stateProvider.state(homeState);
     $stateProvider.state(categoriesState);
+    $stateProvider.state(itemsState);
 
   }
 

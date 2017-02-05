@@ -26,7 +26,7 @@
         method: 'GET',
         url: categoryUrl
       }).then(function(response) {
-        return response;
+        return response.data;
       }, function(response) {
         alert(response);
       });
