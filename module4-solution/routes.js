@@ -32,7 +32,6 @@
       component: 'items',
       resolve: {
         items: [ 'MenuDataService', '$transition$', function (MenuDataService, $transition$) {
-          console.log(MenuDataService.getItemsForCategory($transition$.params().shortName));
           return MenuDataService.getItemsForCategory($transition$.params().shortName);
         }]
       }
