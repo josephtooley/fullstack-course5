@@ -1,0 +1,16 @@
+(function () {
+  'use strict';
+
+  angular.module('admin')
+  .controller('AdminInfoController', AdminInfoController)
+
+  AdminInfoController.$inject = [ 'admin' ];
+  function AdminInfoController (admin) {
+    var $ctrl = this;
+
+    $ctrl.admin = admin;
+    $ctrl.admin.favorite_dish = admin.favorite_dish;
+
+  }
+
+})();

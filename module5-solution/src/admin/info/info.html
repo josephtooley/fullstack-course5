@@ -1,0 +1,17 @@
+<div class="container">
+  <div ng-if="adminInfo.admin">
+    <h3>{{ adminInfo.admin.first_name }}</h3>
+    <h3>{{ adminInfo.admin.last_name }}</h3>
+    <h3>{{ adminInfo.admin.email }}</h3>
+    <h3>{{ adminInfo.admin.phone }}</h3>
+    <h3>{{ adminInfo.admin.favorite_dish }}</h3>
+    <h3>Name: {{ adminInfo.dish_info.name }}</h3>
+    <h3>Description: {{ adminInfo.dish_info.description}}</h3>
+    <img class="img-responsive" width="250" height="150" 
+      ng-src="https://josephtooley-course5.herokuapp.com/images/{{adminInfo.admin.favorite_dish}}.jpg" 
+      alt="Chicken Corn Soup">
+  </div>
+  <div ng-if="!adminInfo.admin">
+    <p>Not Signed Up Yet.  <a ui-sref="admin.signup">Sign up Now!</a></p>
+  </div>
+</div>
